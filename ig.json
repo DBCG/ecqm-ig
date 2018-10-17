@@ -1,0 +1,63 @@
+{
+  "source": "ecqm-methodology.xml",
+  "version": "3.0.1",
+  "license": "CC0-1.0",
+  "logging": ["init", "progress", "context", "html", "tx"],
+  "paths": {
+    "resources": [ "resources" ],
+    "pages": [ "pages" ],
+    "temp": "temp",
+    "output": "output",
+    "qa": "qa",
+    "specification": "http://hl7.org/fhir/STU3",
+    "txCache": "txCache"
+  },
+  "npm-name": "us-ecqm",
+  "jurisdiction": "US",
+  "sct-edition": "http://snomed.info/sct/731000124108",
+  "no-inactive-codes": "false",
+  "broken-links": "warning",
+  "canonicalBase": "http://hl7.org/fhir/us/cqframework/ecqm-methodology",
+  "dependencyList": [
+    {
+      "name": "qicore",
+      "location": "http://hl7.org/fhir/us/qicore",
+      "version": "current"
+    }
+  ],
+  "extraTemplates": [ "mappings" ],
+  "defaults": {
+    "Any": {
+      "template-format": "template-format.html",
+      "template-base": "template-base.html"
+    },
+    "StructureDefinition" : {
+      "template-base": "template-sd.html",
+      "template-mappings": "template-maps.html",
+      "template-defns": "template-defs.html"
+    }
+  },
+  "spreadsheets" : [
+    "library-profile-spreadsheet.xml",
+    "measure-profile-spreadsheet.xml",
+    "valueset-profile-spreadsheet.xml"
+  ],
+  "resources": {
+    "StructureDefinition/valueset-query": {
+      "defns": "StructureDefinition-valueset-query-definitions.html",
+      "base": "StructureDefinition-valueset-query.html",
+      "source": "structuredefinition-valueset-query.xml"
+    },
+    "StructureDefinition/valueset-inclusion": {
+      "defns": "StructureDefinition-valueset-inclusion-definitions.html",
+      "base": "StructureDefinition-valueset-inclusion.html",
+      "source": "structuredefinition-valueset-inclusion.xml"
+    },
+    "StructureDefinition/valueset-exclusion": {
+      "defns": "StructureDefinition-valueset-exclusion-definitions.html",
+      "base": "StructureDefinition-valueset-exclusion.html",
+      "source": "structuredefinition-valueset-exclusion.xml"
+    }
+  },
+  "tool": "jekyll"
+}

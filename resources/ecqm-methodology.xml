@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="ecqm-methodology"/>
+  <url value="http://hl7.org/fhir/us/cqframework/ecqm-methodology/ImplementationGuide/ecqm-methodology"/>
+  <version value="1.0.0"/>
+  <name value="eCQM_Methodology"/>
+  <status value="draft"/>
+  <date value="2018-10-10"/>
+  <package>
+    <name value="eCQM Methodology Package"/>
+    <resource>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="StructureDefinition/valueset-query"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="StructureDefinition/valueset-inclusion"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="StructureDefinition/valueset-exclusion"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <page>
+    <source value="index.html"/>
+    <title value="eCQM Methodology Content"/>
+    <kind value="page"/>
+    <format value="html"/>
+  </page>
+</ImplementationGuide>
