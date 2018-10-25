@@ -10,7 +10,7 @@
 
 <h2>
     <span class="sectioncount">1.0.0&nbsp;</span>
-    <span>eCQM Methodology Implementation Guide</span>
+    <span>eCQM Methodology with CQL and FHIRro Implementation Guide</span>
     <a href="index.html#home" title="link to here" class="self-link"><img src="target.png" width="20" class="self-link" height="20"/></a>
 </h2>
 
@@ -23,22 +23,126 @@
 
 <p>
     The eCQM Methodology Implementation Guide defines a methodology for developing and evaluating <a href="https://ecqi.healthit.gov/ecqms">Electronic Clinical Quality Measures (eCQM)</a>. In order to enforce the methodology this implementation guide defines a set of FHIR profiles, which are necessary to evaluate eCQMs.
-    The profiles in this implementation guide provide a common foundation for building, sharing, and evaluating eCQMs across quality improvement efforts in the US Realm.
+    The profiles in this implementation guide provide a common foundation for building, sharing, and evaluating eCQMs across quality improvement efforts.
+</p>
+
+<a name="scope" style="display:none;">&nbsp;</a>
+<h3>
+    <span class="sectioncount">1.2.0&nbsp;</span>
+    <span>Scope</span>
+    <a href="index.html#summary" title="link to here" class="self-link"><img src="target.png" width="20" class="self-link" height="20"/></a>
+</h3>
+
+<p>
+    The scope of this guide is to provide guidance on the steps and processes involved in fostering a clinical quality measure specification into an electronic,
+    executable representation. The development of clinical quality measure specifications are not included in the scope of this guide. For more information
+    regarding the development of clinical quality measure specifications, visit the <a href="https://ecqi.healthit.gov/">Electronic Clinical Quality Improvement (eCQI) Resource Center</a>.
 </p>
 
 <a name="lifecycle" style="display:none;">&nbsp;</a>
 <h3>
-    <span class="sectioncount">1.2.0&nbsp;</span>
+    <span class="sectioncount">1.3.0&nbsp;</span>
     <span>Lifecycle</span>
     <a href="index.html#lifecycle" title="link to here" class="self-link"><img src="target.png" width="20" class="self-link" height="20"/></a>
 </h3>
 
 <p>
-    The eCQM methodology defined within this implementation guide adheres to the following lifecycle:
+    The eCQM methodology defined within this guide adheres to the following development lifecycle:
+</p>
+
+<div style="padding-bottom: 10px">
+    <img src="assets/images/eCQM_Dev_Cycle.png" height="500" width="500" style="display: block">
+</div>
+
+<a name="authoring" style="display:none;">&nbsp;</a>
+<h4>
+    <span class="sectioncount">1.3.1&nbsp;</span>
+    <span>Authoring</span>
+    <a href="index.html#authoring" title="link to here" class="self-link"><img src="target.png" width="20" class="self-link" height="20"/></a>
+</h4>
+
+<p>
+    The initial phase of the eCQM development lifecycle is the authoring phase. The scope of this phase includes guidance on how to represent the logic outlined in the measure specification as executable expression logic. For the purposes of this guide, the expression logic will be represented in <a href="http://cql.hl7.org/">Clinical Quality Language (CQL)</a>.
 </p>
 
 <p>
-    <img src="assets/images/eCQM_Dev_Cycle.png">
+    For more information on this phase, visit the <a href="authoring.html">Authoring page</a> in this guide.
+</p>
+
+<a name="packaging" style="display:none;">&nbsp;</a>
+<h4>
+    <span class="sectioncount">1.3.2&nbsp;</span>
+    <span>Packaging</span>
+    <a href="index.html#packaging" title="link to here" class="self-link"><img src="target.png" width="20" class="self-link" height="20"/></a>
+</h4>
+
+<p>
+    The second phase of the eCQM development lifecycle is the packaging phase. The scope of this phase includes developing the necessary <a href="http://hl7.org/fhir/">Fast Healthcare Interoperability Resources (FHIR)</a> needed to facilitate the FHIR <a href="http://hl7.org/fhir/measure-operations.html#evaluate-measure">$evaluate-measure operation</a>.
+</p>
+
+<p>
+    For more information on this phase, visit the <a href="packaging.html">Packaging page</a> in this guide.
+</p>
+
+
+<a name="implementation" style="display:none;">&nbsp;</a>
+<h4>
+    <span class="sectioncount">1.3.3&nbsp;</span>
+    <span>Implementation</span>
+    <a href="index.html#implementation" title="link to here" class="self-link"><img src="target.png" width="20" class="self-link" height="20"/></a>
+</h4>
+
+<p>
+    The third phase of the eCQM development lifecycle is the implementation phase. The scope of this phase includes the implementation requirements that must be satisfied in order to execute the FHIR $evaluate-measure operation. These requirements include access to a <a href="http://hl7.org/fhir/capabilitystatement-knowledge-repository.html">FHIR Knowledge Repository</a> and a <a href="http://hl7.org/fhir/capabilitystatement-measure-processor.html">FHIR Measure Processing service</a>.
+</p>
+
+<p>
+    For more information on this phase, visit the <a href="implementation.html">Implementation page</a> in this guide.
+</p>
+
+<a name="testing" style="display:none;">&nbsp;</a>
+<h4>
+    <span class="sectioncount">1.3.4&nbsp;</span>
+    <span>Testing</span>
+    <a href="index.html#testing" title="link to here" class="self-link"><img src="target.png" width="20" class="self-link" height="20"/></a>
+</h4>
+
+<p>
+    The fourth phase of the eCQM development lifecycle is the testing phase. The scope of this phase includes guidance identifying test cases, methods for generating test data, and validating results. The testing phase is optional, but highly recommended.
+</p>
+
+<p>
+    For more information on this phase, visit the <a href="testing.html">Testing page</a> in this guide.
+</p>
+
+<a name="publishing" style="display:none;">&nbsp;</a>
+<h4>
+    <span class="sectioncount">1.3.5&nbsp;</span>
+    <span>Publishing</span>
+    <a href="index.html#publishing" title="link to here" class="self-link"><img src="target.png" width="20" class="self-link" height="20"/></a>
+</h4>
+
+<p>
+    The fifth phase of the eCQM development lifecycle is the publishing phase. The scope of this phase includes guidance on methods for documenting the requirements and assumptions made during the previous phases. For the purposes of this guide, publishing will be discussed in two forms: <a href="http://hl7.org/fhir/implementationguide.html">FHIR Implementation Guide</a> and <a href="https://ecqi.healthit.gov/hqmf-health-quality-measure-format">Health Quality Measure Format (HQMF)</a>.
+</p>
+
+<p>
+    For more information on this phase, visit the <a href="publishing.html">Publishing page</a> in this guide.
+</p>
+
+<a name="maintenance" style="display:none;">&nbsp;</a>
+<h4>
+    <span class="sectioncount">1.3.6&nbsp;</span>
+    <span>Maintenance</span>
+    <a href="index.html#maintenance" title="link to here" class="self-link"><img src="target.png" width="20" class="self-link" height="20"/></a>
+</h4>
+
+<p>
+    The sixth phase of the eCQM development lifecycle is the maintenance phase. The scope of this phase includes updating the content generated in the initial phases based on feedback, changes to the measure specification, or some other trigger that initiates changes to the measure content.
+</p>
+
+<p>
+    For more information on this phase, visit the <a href="maintenance.html">Maintenance page</a> in this guide.
 </p>
 
 {% include container-end.html %}

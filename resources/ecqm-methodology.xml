@@ -9,7 +9,25 @@
   <package>
     <name value="eCQM Methodology Package"/>
     <resource>
-      <example value="true"/>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/ecqm-library"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/ecqm-measure"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/ecqm-valueset"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/valueset-query"/>
       </sourceReference>

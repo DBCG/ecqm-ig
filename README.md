@@ -1,6 +1,6 @@
 # eCQM Implementation Guide
 
-This project outlines the methodology for developing and executing Electronic Clinical Quality Measures.
+This project outlines a methodology for developing and executing Electronic Clinical Quality Measures.
 
 ## Local Build
 

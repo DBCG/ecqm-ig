@@ -18,13 +18,6 @@
   "no-inactive-codes": "false",
   "broken-links": "warning",
   "canonicalBase": "http://hl7.org/fhir/us/cqframework/ecqm-methodology",
-  "dependencyList": [
-    {
-      "name": "qicore",
-      "location": "http://hl7.org/fhir/us/qicore",
-      "version": "current"
-    }
-  ],
   "extraTemplates": [ "mappings" ],
   "defaults": {
     "Any": {
@@ -43,6 +36,18 @@
     "valueset-profile-spreadsheet.xml"
   ],
   "resources": {
+    "StructureDefinition/ecqm-library": {
+      "base": "StructureDefinition-ecqm-library.html",
+      "defns": "StructureDefinition-ecqm-library-definitions.html"
+    },
+    "StructureDefinition/ecqm-measure": {
+      "base": "StructureDefinition-ecqm-measure.html",
+      "defns": "StructureDefinition-ecqm-measure-definitions.html"
+    },
+    "StructureDefinition/ecqm-valueset": {
+      "base": "StructureDefinition-ecqm-valueset.html",
+      "defns": "StructureDefinition-ecqm-valueset-definitions.html"
+    },
     "StructureDefinition/valueset-query": {
       "defns": "StructureDefinition-valueset-query-definitions.html",
       "base": "StructureDefinition-valueset-query.html",
