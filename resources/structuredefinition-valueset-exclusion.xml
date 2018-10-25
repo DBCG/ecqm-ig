@@ -7,13 +7,6 @@
     <status value="draft"/>
     <date value="2018-04-22"/>
     <description value="Describes the exclusion criteria for the ValueSet."/>
-    <jurisdiction>
-        <coding>
-            <system value="urn:iso:std:iso:3166"/>
-            <code value="US"/>
-            <display value="United States of America"/>
-        </coding>
-    </jurisdiction>
     <fhirVersion value="3.0.1"/>
     <mapping>
         <identity value="rim"/>
